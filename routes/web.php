@@ -31,6 +31,7 @@ Route::name('sell')->get('sell', 'Market\CarController@create');
 Route::name('storeCars')->post('storeCars', 'Market\CarController@store');
 //Route::name('sell2')->get('sell2', function(){return view('market/sell2');});
 Route::name('storeCars2')->post('storeCars2', 'Market\CarController@store2');
+Route::name('search')->post('search', 'Market\SearchController@index');
 
 
 
@@ -60,12 +61,13 @@ Route::name('how-use')->get('how-use', function () {
     return view('market/how-use');
 });
 
+
 Route::name('blog')->get('blog', function () {
     return view('market/blog');
 });
 
-Route::name('blogs')->get('blogs', function () {
-    return view('market/blog');
+Route::name('search')->get('search', function () {
+    return view('market/search');
 });
 
 // Route::group(['prefix' => 'admin'], function () {
